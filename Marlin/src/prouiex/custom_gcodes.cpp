@@ -109,11 +109,16 @@ void C250() {
   }
 #endif
 
-#if DEBUG_DWIN
+#if ENABLED(DEBUG_DWIN)
   void C997() {
     SERIAL_ECHOLNPGM("Simulating a printer freeze");
     TERN_(DWIN_LCD_PROUI, dwinRebootScreen());
     while (1) {};
+  }
+#elif NONE(PLATFORM_M997_SUPPORT, DWIN_LCD_PROUI)
+  void C997() {
+    SERIAL_ECHOLNPGM("Reboot printer");
+    hal.reboot();
   }
 #endif
 
@@ -130,8 +135,8 @@ void customGcode(const int16_t codenum) {
     #if HAS_LOCKSCREEN
       case 510: C510(); break;            // lock screen
     #endif
-    #if DEBUG_DWIN
-      case 997: C997(); break;            // Simulate a printer freeze
+    #if ENABLED(DEBUG_DWIN) || NONE(PLATFORM_M997_SUPPORT, DWIN_LCD_PROUI)
+      case 997: C997(); break;            // Simulate a printer freeze (or reboot)
     #endif
     #if HAS_MEDIA
       case 10: proUIEx.C10(); break;    // Mark the G-code file as a Configuration file

@@ -222,6 +222,9 @@ void GcodeSuite::M115() {
     // CONFIG_EXPORT
     cap_line(F("CONFIG_EXPORT"), ENABLED(CONFIGURATION_EMBEDDING));
 
+    // PROUI AML
+    cap_line(F("PROUI_AML"), ENABLED(PROUI_EX));
+
     // Machine Geometry
     #if ENABLED(M115_GEOMETRY_REPORT)
       TERN(PROUI_EX, const, constexpr) xyz_pos_t bmin{0},

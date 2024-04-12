@@ -126,7 +126,7 @@ typedef struct { // Do not change this data structure
   int16_t x_max_pos  = DEF_X_MAX_POS;
   int16_t y_max_pos  = DEF_Y_MAX_POS;
   int16_t z_max_pos  = DEF_Z_MAX_POS;
-  float probezfix = DEF_PROBEZFIX;
+  float probezfix = TERN0(DEF_PROBEZFIX,DEF_PROBEZFIX);
   uint16_t zprobefeedslow = DEF_Z_PROBE_FEEDRATE_SLOW;
   uint8_t multiple_probing = MULTIPLE_PROBING;
   bool Invert_E0 = DEF_INVERT_E0_DIR;

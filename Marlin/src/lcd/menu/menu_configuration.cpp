@@ -625,7 +625,7 @@ void menu_configuration() {
   #endif
 
   #if ENABLED(FWRETRACT)
-    SUBMENU(MSG_RETRACT, menu_config_retract);
+    SUBMENU(MSG_FWRETRACT, menu_config_retract);
   #endif
 
   #if HAS_FILAMENT_SENSOR

@@ -162,6 +162,7 @@ void BedLevelTools::probeXY() {
 }
 
 void BedLevelTools::meshReset() {
+  set_bed_leveling_enabled(false);
   ZERO(bedlevel.z_values);
   #if ENABLED(AUTO_BED_LEVELING_BILINEAR)
     bedlevel.refresh_bed_level();
@@ -170,10 +171,10 @@ void BedLevelTools::meshReset() {
 
 // Return 'true' if mesh is good and within limits
 bool BedLevelTools::meshValidate() {
-  if (MESH_MAX_X <= MESH_MIN_X || MESH_MAX_Y <= MESH_MIN_Y) return false;
+  if ((MESH_MAX_X <= MESH_MIN_X) || (MESH_MAX_Y <= MESH_MIN_Y)) return false;
   GRID_LOOP(x, y) {
     const float v = bedlevel.z_values[x][y];
-    if (isnan(v) || !WITHIN(v, UBL_Z_OFFSET_MIN, UBL_Z_OFFSET_MAX)) return false;
+    if (isnan(v) || !WITHIN(v, Z_OFFSET_MIN, Z_OFFSET_MAX)) return false;
   }
   return true;
 }

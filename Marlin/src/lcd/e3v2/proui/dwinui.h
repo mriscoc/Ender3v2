@@ -209,7 +209,8 @@ constexpr uint8_t  TITLE_HEIGHT = 30,                          // Title bar heig
                    LBLX = 55,                                  // Menu item label X position
                    VALX = 210,                                 // Menu item value X position
                    MENU_CHR_W = 8, MENU_CHR_H = 16,            // Menu font 8x16
-                   STAT_CHR_W = 10;
+                   DASH_CHR_W = 10,                            // Width of Dashboard fonts
+                   DASH_ICO_COL1 = 7;                          // First column of dashboard icons
 
 // Menuitem Y position
 #define MYPOS(L) (TITLE_HEIGHT + MLINE * (L))
