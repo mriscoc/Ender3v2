@@ -296,7 +296,7 @@ typedef struct SettingsDataStruct {
   #if ENABLED(MESH_BED_LEVELING)
     float mbl_z_offset;                                   // bedlevel.z_offset
     uint8_t mesh_num_x, mesh_num_y;                       // GRID_MAX_POINTS_X, GRID_MAX_POINTS_Y
-    uint16_t mesh_check; 
+    uint16_t mesh_check;
     #if PROUI_EX
       float mbl_z_values[TERN(MESH_BED_LEVELING, GRID_LIMIT, 3)]   // bedlevel.z_values
                         [TERN(MESH_BED_LEVELING, GRID_LIMIT, 3)];
@@ -2058,7 +2058,7 @@ void MarlinSettings::postprocess() {
 
         #if HAS_SCARA_OFFSET
           EEPROM_READ(scara_home_offset);
-        #elsif HAS_HOME_OFFSET
+        #elif HAS_HOME_OFFSET
           EEPROM_READ(home_offset);
         #endif
       }
