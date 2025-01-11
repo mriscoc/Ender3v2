@@ -1,22 +1,31 @@
 name: 🐛 Report a bug
 description: Create a bug report to help improve the Professional Firmware
 title: "[BUG] (bug summary)"
+labels: ["Bug: Potential ?"]
 body:
   - type: markdown
     attributes:
-      value: >
-        Do you want to ask a question? Are you looking for support or a feature request? Please use the [Discussions page](https://github.com/mriscoc/Ender3V2S1/discussions).
-
-  - type: markdown
-    attributes:
       value: |
-        **Thank you for reporting a bug in Professional Firmware!**
-
-        ## Before Reporting a Bug
+        ## Do you want to ask a question? Are you looking for support or a feature request?
+        **This is not a general printer support forum**. Many problems can be easily solved by reading the firmware [Wiki](https://github.com/mriscoc/Ender3V2S1/wiki#main-topics), please check the calibration guide.
+        This Issue Queue is for firmware bug reports and development-related issues, and we prefer not to handle user-support questions here.  
+        
+        For best results getting help with configuration and troubleshooting, please use the following resources:  
+        
+        Enhanced support in Patreon: https://www.patreon.com/mriscoc  
+        
+        Free community support:  
+        - Github discussions: https://github.com/mriscoc/Ender3V2S1/discussions
+        - Facebook: https://www.facebook.com/groups/professionalfirmware
+        - Telegram: https://t.me/ender3v2s1firmware
+        - Reddit: https://www.reddit.com/r/Ender3v2Firmware
+        - Discord: https://discord.gg/3dprinters
+  
+          ## Before Reporting a Bug
 
         - Read and understand [Code of Conduct](https://github.com/mriscoc/Ender3V2S1/blob/Ender3V2S1-Released/.github/code_of_conduct.md). You are expected to comply with it, including treating everyone with respect.
 
-         - Try the latest precompiled versions to make sure the issue you are reporting is not caused by your custom configuration.
+        - Try the latest precompiled versions to make sure the issue you are reporting is not caused by your custom configuration.
 
         - If you compile a custom version, test your configuration with the Marlin [`bugfix-2.1.x` branch](https://github.com/MarlinFirmware/Marlin/archive/bugfix-2.1.x.zip) to see whether the issue also exists in Marlin.
 
@@ -110,8 +119,13 @@ body:
 
   - type: input
     attributes:
-      label: Add-ons
-      description: Please list any hardware add-ons that could be involved.
+      label: LCD/Controller
+      description: Some Marlin behaviors are determined by the controller. Describe your LCD/Controller model and version.
+
+  - type: input
+    attributes:
+      label: Other add-ons
+      description: Please list any other hardware add-ons that could be involved.
 
   - type: dropdown
     attributes:

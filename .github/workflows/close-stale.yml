@@ -14,10 +14,10 @@ jobs:
     name: Close Stale Issues
     if: github.repository == 'mriscoc/Ender3V2S1'
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
-    - uses: actions/stale@v3
+    - uses: actions/stale@v9
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         stale-issue-message: 'This issue has had no activity in the last 60 days. Please add a reply if you want to keep this issue active, otherwise it will be automatically closed within 10 days.'
