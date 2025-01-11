@@ -68,6 +68,10 @@
   #include "../../feature/spindle_laser.h"
 #endif
 
+#if ENABLED(CV_LASER_MODULE)
+  #include "../../prouiex/cv_laser_module.h"
+#endif
+
 #define DEBUG_OUT ENABLED(DEBUG_LEVELING_FEATURE)
 #include "../../core/debug_out.h"
 

@@ -58,6 +58,10 @@
   #include "../../../feature/runout.h"
 #endif
 
+#if ENABLED(CV_LASER_MODULE)
+  #include "../../../prouiex/cv_laser_module.h"
+#endif
+
 /**
  * M600: Pause for filament change
  *

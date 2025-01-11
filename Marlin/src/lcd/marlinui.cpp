@@ -64,6 +64,10 @@ MarlinUI ui;
   #include "../module/printcounter.h"
 #endif
 
+#if ENABLED(CV_LASER_MODULE)
+  #include "../prouiex/cv_laser_module.h"
+#endif
+
 #if LCD_HAS_WAIT_FOR_MOVE
   bool MarlinUI::wait_for_move; // = false
 #endif

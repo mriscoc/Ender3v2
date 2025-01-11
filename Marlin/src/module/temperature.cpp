@@ -46,6 +46,10 @@
   #include "../feature/controllerfan.h"
 #endif
 
+#if ENABLED(CV_LASER_MODULE)
+  #include "../prouiex/cv_laser_module.h"
+#endif
+
 #if ENABLED(EMERGENCY_PARSER)
   #include "motion.h"
 #endif

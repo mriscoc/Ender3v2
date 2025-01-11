@@ -62,6 +62,10 @@ uint32_t PrintJobRecovery::cmd_sdpos, // = 0
 #include "../module/printcounter.h"
 #include "../module/temperature.h"
 
+#if ENABLED(CV_LASER_MODULE)
+  #include "../prouiex/cv_laser_module.h"
+#endif
+
 #if HOMING_Z_WITH_PROBE
   #include "../module/probe.h"
 #endif

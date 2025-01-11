@@ -45,10 +45,15 @@
   #include "../../lcd/extui/dgus/DGUSDisplayDef.h"
 #endif
 
-#if ALL(DWIN_LCD_PROUI, CV_LASER_MODULE)
+#if ALL(DWIN_LCD_PROUI)
   #include "../../lcd/e3v2/proui/dwin.h"
-  #include "../../feature/spindle_laser.h"
 #endif
+
+#if ENABLED(CV_LASER_MODULE)
+  #include "../../feature/spindle_laser.h"
+  #include "../../prouiex/cv_laser_module.h"
+#endif
+
 
 #include "../../MarlinCore.h" // for startOrResumeJob
 
