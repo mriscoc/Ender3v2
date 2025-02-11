@@ -6,7 +6,7 @@
 
 ## Universal RET6/RCT6 Edition
 
-The Precompiled binary files of this firmware can work with STM32FX RET6 or RCT6 and can be downloader from:
+The Precompiled binary files of this firmware can work with STM32FX RET6 or RCT6 and can be downloaded from:
 [Latest Release](https://github.com/mriscoc/Ender3V2S1/releases/latest)
 
 <img aling=left height=240 src="buildroot/share/pixmaps/Ender-3V2.jpg" /> <img height=300 src="buildroot/share/pixmaps/Ender-3S1.jpg" />
